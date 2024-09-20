@@ -60,7 +60,6 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -85,7 +84,6 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ResumeCard
-                key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
@@ -105,7 +103,7 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge>{skill}</Badge>
               </BlurFade>
             ))}
           </div>
@@ -138,13 +136,12 @@ export default function Page() {
               >
                 <ProjectCard
                   href={project.href}
-                  key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
+                  video={project.video} // Ensure this exists in your data
                   links={project.links}
                 />
               </BlurFade>
@@ -158,14 +155,14 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                 Certifications
+                  Certifications
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like to Learn New Skills
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Throughout my professional journey, Certifications These experiences have been eye-opening,
-                   Each certification has deepened my knowledge and skills, allowing me to contribute effectively in various projects and environments.
+                  Each certification has deepened my knowledge and skills, allowing me to contribute effectively in various projects and environments.
                 </p>
               </div>
             </div>
@@ -202,18 +199,18 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                I am always open to discussing new projects and opportunities. Feel free to reach out!
               </p>
             </div>
           </BlurFade>
+          <div className="flex justify-center gap-4">
+            <Link href="mailto:example@example.com" className="link">
+              Email
+            </Link>
+            <Link href="https://linkedin.com/in/yourprofile" className="link">
+              LinkedIn
+            </Link>
+          </div>
         </div>
       </section>
     </main>
