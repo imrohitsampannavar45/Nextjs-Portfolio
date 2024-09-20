@@ -141,7 +141,7 @@ export default function Page() {
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video} // Ensure this exists in your data
+                  video={project.video || null} // Use null or a default value if video does not exist
                   links={project.links}
                 />
               </BlurFade>
@@ -161,8 +161,7 @@ export default function Page() {
                   I like to Learn New Skills
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Throughout my professional journey, Certifications These experiences have been eye-opening,
-                  Each certification has deepened my knowledge and skills, allowing me to contribute effectively in various projects and environments.
+                  Throughout my professional journey, certifications have been eye-opening. Each certification has deepened my knowledge and skills, allowing me to contribute effectively in various projects and environments.
                 </p>
               </div>
             </div>

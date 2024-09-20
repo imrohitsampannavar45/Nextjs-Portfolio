@@ -7,16 +7,16 @@ interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;
   variant?: {
-    hidden: { y: number };
-    visible: { y: number };
+    hidden: { y: number; opacity: number; filter: string };
+    visible: { y: number; opacity: number; filter: string };
   };
   duration?: number;
   delay?: number;
   yOffset?: number;
-  inView?: boolean;
-  inViewMargin?: string;
+  inViewMargin?: "-50px"; // Change to string to accept pixel values like "-50px"
   blur?: string;
 }
+
 const BlurFade = ({
   children,
   className,
@@ -24,24 +24,25 @@ const BlurFade = ({
   duration = 0.4,
   delay = 0,
   yOffset = 6,
-  inView = false,
-  inViewMargin = "-50px",
+  inViewMargin = "-50px", // Use string for margin
   blur = "6px",
 }: BlurFadeProps) => {
-  const ref = useRef(null);
-  const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
-  const isInView = !inView || inViewResult;
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: inViewMargin });
+
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
-    visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
+    visible: { y: 0, opacity: 1, filter: "blur(0px)" },
   };
+
   const combinedVariants = variant || defaultVariants;
+
   return (
     <AnimatePresence>
       <motion.div
         ref={ref}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={inView ? "visible" : "hidden"}
         exit="hidden"
         variants={combinedVariants}
         transition={{

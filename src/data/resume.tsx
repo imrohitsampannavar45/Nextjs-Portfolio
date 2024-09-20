@@ -167,7 +167,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/project_1.gif"
+      image: "",
+      video: "https://youtu.be/vYUXigq9TSQ?si=OklOjUBrg1q6PgOs",
     },
     {
       title: "Prescripto - Doctor Appointment Website",
