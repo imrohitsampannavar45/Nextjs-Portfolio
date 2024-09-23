@@ -261,7 +261,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/youtube%20clone.webm",
+      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/youtube+clone.webm",
     },
 
     {
