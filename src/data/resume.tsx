@@ -321,6 +321,151 @@ export const DATA = {
       image: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/project.png",
       video: "",
     },
+
+    {
+      title: "Blogger App- NextJS",
+      href: "https://github.com/imrohitsampannavar45/Blogger-Website-NextJS.git",
+      dates: "Jan 2024 - Feb 2024",
+      active: true,
+      description:
+        "A feature-rich blogging platform built using Next.js. It allows users to create, edit, delete, and view blog posts. The app features user authentication, SEO optimization, comment sections, and a responsive design to ensure a seamless user experience across all devices..",
+      technologies: [
+        "Nextjs",
+        "Javascript",
+        "MongoDB",
+        "CSS",
+        "Node.js",
+        "TailwindCSS",
+      "JWT/OAuth for Authentication",
+      "RESTful API Development"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/imrohitsampannavar45/Blogger-Website-NextJS.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/Blogger+App+(NextJS).mp4",
+    },
+
+
+
+
+
+
+    {
+      title: "Netflix Clone",
+      href: "https://github.com/imrohitsampannavar45/netflix-clone.git",
+      dates: "Dec 2023 - Dec 2023",
+      active: true,
+      description:
+        "A Netflix-inspired streaming platform built with React and Tailwind CSS. This app features a sleek and modern UI, allowing users to browse, search, and watch movies and TV shows. It includes user authentication, a video player, and a responsive design to ensure a seamless viewing experience across all devices.",
+      technologies: [
+        "Reactjs",
+        "Javascript",
+        "CSS",
+        "Node.js",
+        "TailwindCSS",
+      "JWT/OAuth for Authentication",
+      "RESTful API Development"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/imrohitsampannavar45/netflix-clone.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/Netflix+Clone+-+Video.mp4",
+    },
+
+
+
+
+
+    {
+      title: "Wanderlust",
+      href: "https://wanderlust-atq3.onrender.com/",
+      dates: "Nov 2023 - Dec 2023",
+      active: true,
+      description:
+        "A travel blog platform where users can share their travel experiences and adventures. Built with Next.js, this app features user authentication, post creation and management, commenting, and responsive design. It allows users to explore various travel stories, categorized by destinations and tags, providing an engaging and interactive experience.",
+      technologies: [
+        "Javascript",
+        "CSS",
+        "Node.js",
+        "TailwindCSS",
+      "JWT/OAuth for Authentication",
+      "RESTful API Development",
+      "Responsive Design",
+      "SEO Best Practices"
+      ],
+      links: [
+
+        {
+          type: "Website",
+          href: "https://wanderlust-atq3.onrender.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/imrohitsampannavar45/Wanderlust.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/Wanderlust+Project.mp4",
+    },
+
+
+    {
+      title: "CryptoPlace",
+      href: "https://crypto-place-beta.vercel.app/",
+      dates: "May 2024 - May 2024",
+      active: true,
+      description:
+        "A cryptocurrency tracking and portfolio management app built with React and Tailwind CSS. CryptoPalace allows users to track the prices of various cryptocurrencies in real-time, manage their portfolio, and view historical price charts. The app features user authentication, a responsive design, and interactive charts for a comprehensive user experience.",
+      technologies: [
+        "Javascript",
+        "CSS",
+        "Node.js",
+        "TailwindCSS",
+      "RESTful API Development",
+      "Responsive Design",
+      ],
+      links: [
+
+        {
+          type: "Website",
+          href: "https://crypto-place-beta.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/imrohitsampannavar45/CryptoPlace.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/Cryptoplace-Video.mp4",
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ],
   hackathons: [
     {
