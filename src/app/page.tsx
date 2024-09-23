@@ -203,10 +203,10 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="flex justify-center gap-4">
-            <Link href="mailto:example@example.com" className="link">
+            <Link href="mailto:imrohitsampannavar@gmail.com" className="link">
               Email
             </Link>
-            <Link href="https://linkedin.com/in/yourprofile" className="link">
+            <Link href="https://www.linkedin.com/in/rohitvs1/" className="link">
               LinkedIn
             </Link>
           </div>
