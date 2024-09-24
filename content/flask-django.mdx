@@ -1,0 +1,230 @@
+---
+title: "Flask and Django "
+publishedAt: "2024-09-24"
+summary: ""
+---
+
+```mdx
+# Flask and Django Notes
+
+## Flask
+
+### Introduction to Flask
+Flask is a micro web framework for Python. It is lightweight and modular, making it adaptable to developers’ needs.
+
+### Key Features of Flask
+- Lightweight and easy to use.
+- Built-in development server and debugger.
+- Integrated support for unit testing.
+- RESTful request dispatching.
+
+### Setting Up Flask
+To get started with Flask, you need to install it first:
+```bash
+pip install Flask
+```
+
+### Basic Flask Application
+Here’s a simple example of a Flask application:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, Flask!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+### Routing
+Flask uses decorators to define routes.
+
+```python
+@app.route('/about')
+def about():
+    return "About Page"
+```
+
+### Request and Response
+You can handle HTTP requests and responses using Flask’s built-in objects.
+
+```python
+from flask import request
+
+@app.route('/greet', methods=['POST'])
+def greet():
+    name = request.form.get('name')
+    return f"Hello, {name}!"
+```
+
+### Template Rendering
+Flask uses Jinja2 as its template engine. Here’s how to render a template:
+
+```python
+from flask import render_template
+
+@app.route('/hello/<name>')
+def hello(name):
+    return render_template('hello.html', name=name)
+```
+
+### Handling Forms
+You can handle forms easily in Flask.
+
+```python
+from flask import request, redirect, url_for
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.form['data']
+    # Process the data
+    return redirect(url_for('home'))
+```
+
+### Flask Extensions
+Flask has many extensions that add functionality to the core framework. Some popular extensions include:
+- Flask-SQLAlchemy: ORM for database integration.
+- Flask-Migrate: Database migration tool.
+- Flask-WTF: Form handling and validation.
+
+## Django
+
+### Introduction to Django
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+### Key Features of Django
+- Built-in ORM for database interactions.
+- Automatic admin interface.
+- URL routing and form handling.
+- Strong security features.
+
+### Setting Up Django
+To start a new Django project, you need to install Django:
+
+```bash
+pip install Django
+```
+
+### Creating a Django Project
+Create a new project using the Django command-line tool.
+
+```bash
+django-admin startproject myproject
+cd myproject
+python manage.py runserver
+```
+
+### Creating a Django App
+Django projects are made up of applications. Create a new app with:
+
+```bash
+python manage.py startapp myapp
+```
+
+### URL Routing in Django
+Define URLs in your app’s `urls.py` file.
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+```
+
+### Views in Django
+Views are functions that handle the logic of your application.
+
+```python
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django!")
+```
+
+### Template Rendering
+Django uses a templating engine to render HTML pages.
+
+```html
+<!-- templates/home.html -->
+<h1>Hello, {{ name }}!</h1>
+```
+
+```python
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html', {'name': 'Django'})
+```
+
+### Handling Forms
+Django provides form handling utilities.
+
+```python
+from django import forms
+
+class MyForm(forms.Form):
+    name = forms.CharField(label='Your name', max_length=100)
+```
+
+### Model Definition
+Django’s ORM allows you to define models to interact with the database.
+
+```python
+from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+```
+
+### Django Admin Interface
+Django automatically creates an admin interface for your models. To use it, register your models in `admin.py`.
+
+```python
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
+```
+
+## Flask and Django Interview Questions
+
+### Flask Interview Questions
+1. **What is Flask?**
+   Flask is a micro web framework for Python that provides a simple way to build web applications.
+
+2. **What are Flask decorators?**
+   Decorators in Flask are used to wrap functions with additional functionality, commonly used for routing.
+
+3. **How does Flask handle sessions?**
+   Flask uses a secure cookie to store session data on the client-side.
+
+4. **What are Flask extensions?**
+   Flask extensions are packages that add functionality to the core Flask framework, such as database integration and form handling.
+
+5. **What is Jinja2?**
+   Jinja2 is the templating engine used by Flask for rendering HTML pages.
+
+### Django Interview Questions
+1. **What is Django?**
+   Django is a high-level web framework for Python that promotes rapid development and clean, pragmatic design.
+
+2. **What is the purpose of Django’s ORM?**
+   Django’s ORM allows developers to interact with the database using Python objects instead of SQL queries.
+
+3. **How do you create a new Django project?**
+   You can create a new Django project using the command `django-admin startproject projectname`.
+
+4. **What are middleware in Django?**
+   Middleware are hooks into Django's request/response processing. They're used to process requests globally before reaching the view or after the view has processed them.
+
+5. **What is the Django admin interface?**
+   The Django admin interface is an automatically generated web-based interface that allows you to manage your application’s data.
+

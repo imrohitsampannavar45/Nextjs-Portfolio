@@ -1,0 +1,367 @@
+---
+title: "Java Concepts"
+publishedAt: "2024-09-24"
+summary: "Full Stack Developer passionate about MERN stack technologies and creating innovative web applications."
+---
+
+# Java Concepts
+
+## 1. Introduction to Java
+- **Java Basics**
+    ```java
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+    ```
+
+## 2. Data Types and Variables
+- **Primitive Data Types**
+    ```java
+    int num = 5;
+    char letter = 'A';
+    boolean isTrue = true;
+    double decimal = 5.99;
+    ```
+- **Reference Data Types**
+    ```java
+    String text = "Hello, Java";
+    int[] numbers = {1, 2, 3, 4, 5};
+    ```
+
+## 3. Operators
+- **Arithmetic Operators**
+    ```java
+    int sum = 5 + 3;
+    int difference = 5 - 3;
+    int product = 5 * 3;
+    int quotient = 5 / 3;
+    int remainder = 5 % 3;
+    ```
+
+## 4. Control Flow Statements
+- **If-Else Statement**
+    ```java
+    int num = 10;
+    if (num > 5) {
+        System.out.println("Number is greater than 5");
+    } else {
+        System.out.println("Number is 5 or less");
+    }
+    ```
+- **Switch Statement**
+    ```java
+    int day = 3;
+    switch (day) {
+        case 1:
+            System.out.println("Monday");
+            break;
+        case 2:
+            System.out.println("Tuesday");
+            break;
+        default:
+            System.out.println("Other day");
+    }
+    ```
+- **For Loop**
+    ```java
+    for (int i = 0; i < 5; i++) {
+        System.out.println(i);
+    }
+    ```
+- **While Loop**
+    ```java
+    int i = 0;
+    while (i < 5) {
+        System.out.println(i);
+        i++;
+    }
+    ```
+
+## 5. Methods
+- **Defining and Calling Methods**
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            sayHello();
+        }
+        
+        public static void sayHello() {
+            System.out.println("Hello, Java!");
+        }
+    }
+    ```
+
+## 6. Object-Oriented Programming
+- **Classes and Objects**
+    ```java
+    class Dog {
+        String name;
+        int age;
+        
+        void bark() {
+            System.out.println("Woof!");
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            Dog myDog = new Dog();
+            myDog.name = "Buddy";
+            myDog.age = 3;
+            myDog.bark();
+        }
+    }
+    ```
+- **Inheritance**
+    ```java
+    class Animal {
+        void eat() {
+            System.out.println("Eating...");
+        }
+    }
+    
+    class Dog extends Animal {
+        void bark() {
+            System.out.println("Woof!");
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            Dog myDog = new Dog();
+            myDog.eat();
+            myDog.bark();
+        }
+    }
+    ```
+- **Polymorphism**
+    ```java
+    class Animal {
+        void sound() {
+            System.out.println("Animal sound");
+        }
+    }
+    
+    class Dog extends Animal {
+        void sound() {
+            System.out.println("Woof");
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            Animal myAnimal = new Dog();
+            myAnimal.sound();
+        }
+    }
+    ```
+- **Encapsulation**
+    ```java
+    class Person {
+        private String name;
+        
+        public String getName() {
+            return name;
+        }
+        
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            Person person = new Person();
+            person.setName("John");
+            System.out.println(person.getName());
+        }
+    }
+    ```
+
+## 7. Arrays
+- **One-dimensional Arrays**
+    ```java
+    int[] numbers = {1, 2, 3, 4, 5};
+    for (int number : numbers) {
+        System.out.println(number);
+    }
+    ```
+- **Two-dimensional Arrays**
+    ```java
+    int[][] matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0; j < matrix[i].length; j++) {
+            System.out.print(matrix[i][j] + " ");
+        }
+        System.out.println();
+    }
+    ```
+
+## 8. Exception Handling
+- **Try-Catch Block**
+    ```java
+    try {
+        int result = 10 / 0;
+    } catch (ArithmeticException e) {
+        System.out.println("Cannot divide by zero");
+    }
+    ```
+
+## 9. Collections Framework
+- **ArrayList**
+    ```java
+    import java.util.ArrayList;
+    
+    public class Main {
+        public static void main(String[] args) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add("Apple");
+            list.add("Banana");
+            list.add("Cherry");
+            
+            for (String fruit : list) {
+                System.out.println(fruit);
+            }
+        }
+    }
+    ```
+- **HashMap**
+    ```java
+    import java.util.HashMap;
+    
+    public class Main {
+        public static void main(String[] args) {
+            HashMap<String, Integer> map = new HashMap<>();
+            map.put("Apple", 1);
+            map.put("Banana", 2);
+            map.put("Cherry", 3);
+            
+            for (String key : map.keySet()) {
+                System.out.println(key + ": " + map.get(key));
+            }
+        }
+    }
+    ```
+
+## 10. File Handling
+- **Reading from a File**
+    ```java
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    import java.util.Scanner;
+    
+    public class Main {
+        public static void main(String[] args) {
+            try {
+                File myFile = new File("filename.txt");
+                Scanner reader = new Scanner(myFile);
+                while (reader.hasNextLine()) {
+                    String data = reader.nextLine();
+                    System.out.println(data);
+                }
+                reader.close();
+            } catch (FileNotFoundException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+        }
+    }
+    ```
+
+## 11. Multithreading
+- **Creating a Thread by Extending Thread Class**
+    ```java
+    class MyThread extends Thread {
+        public void run() {
+            System.out.println("Thread is running");
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            MyThread t1 = new MyThread();
+            t1.start();
+        }
+    }
+    ```
+- **Creating a Thread by Implementing Runnable Interface**
+    ```java
+    class MyRunnable implements Runnable {
+        public void run() {
+            System.out.println("Thread is running");
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            MyRunnable myRunnable = new MyRunnable();
+            Thread t1 = new Thread(myRunnable);
+            t1.start();
+        }
+    }
+    ```
+
+## 12. Advanced Concepts
+- **Lambda Expressions**
+    ```java
+    interface MyFunctionalInterface {
+        void myMethod();
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            MyFunctionalInterface myFunc = () -> System.out.println("Lambda Expression Example");
+            myFunc.myMethod();
+        }
+    }
+    ```
+- **Streams API**
+    ```java
+    import java.util.Arrays;
+    import java.util.List;
+    
+    public class Main {
+        public static void main(String[] args) {
+            List<String> names = Arrays.asList("John", "Jane", "Jack", "Doe");
+            names.stream()
+                 .filter(name -> name.startsWith("J"))
+                 .forEach(System.out::println);
+        }
+    }
+    ```
+# Java Theory Questions
+
+## 1. What is Java?
+Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is intended to let application developers write once, run anywhere (WORA).
+
+## 2. What are the main features of Java?
+- **Object-Oriented:** Java follows the OOP principles.
+- **Platform Independent:** Java code can run on any device that has a Java Virtual Machine (JVM).
+- **Simple and Secure:** Java provides a robust and secure environment.
+- **Multithreading:** Java supports concurrent execution of two or more threads for maximum CPU utilization.
+
+## 3. What is the difference between JDK, JRE, and JVM?
+- **JDK (Java Development Kit):** A software development kit that includes tools for developing Java applications, including the JRE.
+- **JRE (Java Runtime Environment):** A part of the JDK that allows you to run Java applications. It includes the JVM and libraries.
+- **JVM (Java Virtual Machine):** An abstract machine that enables a computer to run Java programs. It translates Java bytecode into machine code.
+
+## 4. Explain the concept of Object-Oriented Programming (OOP) and its principles.
+Object-Oriented Programming is a programming paradigm that uses "objects" to represent data and methods. The main principles of OOP are:
+- **Encapsulation:** Bundling the data and methods that operate on the data within one unit, or class.
+- **Inheritance:** Mechanism by which one class can inherit properties and methods from another class.
+- **Polymorphism:** The ability of different classes to respond to the same method call in different ways.
+
+## 5. What is the role of the main method in Java?
+The `main` method is the entry point of any Java program. It is always defined as:
+```java
+public static void main(String[] args) {
+    // code to be executed
+}
+```
+
