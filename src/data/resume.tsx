@@ -476,12 +476,27 @@ export const DATA = {
         "The Oracle Cloud Infrastructure 2024 Generative AI Professional certification is designed for Software Developers, Machine Learning/AI Engineers, and Gen AI Professionals. The prerequisite for this course includes a basic understanding of Machine Learning and Deep Learning concepts and experience with Python language.",
       image:
         "https://brm-workforce.oracle.com/pdf/certview/images/OCI2024GAIOCP.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
         {
           title: "Oracle Certifictae",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=06B8DF09054BA488D2259842EA839F55681260D2985571B9385798230B09948B",
+        },
+      ],
+    },
+    {
+      title: "Postman API Fundamentals Student Expert certification",
+      dates: " Jan 8 2024",
+      location: "POSTMAN",
+      description:
+        " I earned a digital badge certifying my understanding of APIs, including their importance in modern software development, using Postman to work with APIs, and interacting with a real-world API. This certification involved hands-on experience with industry-leading API tools, preparing me to confidently use APIs in real-world applications.",
+      image:
+        "https://cc.sj-cdn.net/instructor/3d8458f2k85sh-postman/courses/1a8b8cdxvqjxq/promo-image.1676069333.png",
+      links: [
+        {
+          title: "POSTMAN Certificate",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://academy.postman.com/postman-api-fundamentals-student-expert-certification-1",
         },
       ],
     },
