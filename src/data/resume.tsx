@@ -81,6 +81,21 @@ export const DATA = {
 
   work: [
     {
+      company: "Accenture",
+      href: "https://www.accenture.com/in-en",
+      badges: ["Full Time"],
+      location: "Bengaluru",
+      title: "Packaged Application Development Associate",
+      logoUrl: "https://logos-world.net/wp-content/uploads/2020/06/Accenture-Emblem.png",
+      start: "Aug 2024",
+      end: "Present",
+      description:
+        "Application Developer",
+    },
+
+
+
+    {
       company: "Skylux Telelink Pvt Ltd",
       href: "https://skyluxinc.com/",
       badges: ["Full Time"],
