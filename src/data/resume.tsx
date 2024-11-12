@@ -436,6 +436,43 @@ export const DATA = {
     },
 
 
+
+    {
+      title: "E-State Real Estate Portal",
+      href: "https://estate-project-one.vercel.app/",
+      dates: "Oct 2024 - Nov 2024",
+      active: true,
+      description:
+        "This real estate web application is designed to provide users with a seamless experience for browsing, buying, selling, and renting properties. It features a user-friendly interface with advanced search functionality, detailed property listings, and a secure backend to manage user data and transactions.",
+      technologies: [
+        "React",
+        "Javascript",
+        "CSS",
+        "Node.js",
+        "TailwindCSS",
+        "Form3webjs"
+      
+      ],
+      links: [
+
+        {
+          type: "Website",
+          href: "https://estate-project-one.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/imrohitsampannavar45/Estate-Project.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://myprojectvideos123.s3.ap-south-1.amazonaws.com/realstate.mp4",
+    },
+
+
+
+
     {
       title: "CryptoPlace",
       href: "https://crypto-place-beta.vercel.app/",
